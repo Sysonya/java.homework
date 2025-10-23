@@ -1,49 +1,66 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        ArrayList<String> color = new ArrayList<String>();
+    public static void main(String[] args){
+        ArrayList<String> color = new ArrayList<>();
         color.add("red");
-        color.add("blue");
         color.add("black");
-        for (int i = 0; i < color.size(); i++)
-        {
+        color.add("green");
+        for(int i = 0; i < color.size(); i++){
             System.out.println(color.get(i));
         }
-        color.add(0, "black");
+        color.add(0, "yellow");
         System.out.println();
-        for (int i = 0; i < color.size(); i++)
-        {
+        for(int i = 0; i < color.size(); i++){
             System.out.println(color.get(i));
         }
+        System.out.println();
         System.out.println(color.get(1));
-        color.set(0, "yellow");
+        color.set(0, "blue");
         System.out.println();
-        for (int i = 0; i < color.size(); i++)
-        {
+        for(int i = 0; i < color.size(); i++){
             System.out.println(color.get(i));
         }
-        System.out.println( color.remove(2));
         System.out.println();
-        for (int i = 0; i < color.size(); i++)
-        {
+        System.out.println(color.remove(2));
+        System.out.println();
+        for(int i = 0; i < color.size(); i++){
             System.out.println(color.get(i));
         }
-        System.out.println(color.contains("blue"));
-        System.out.println(color.contains("red"));
+        System.out.println();
+        System.out.println(color.contains("yellow"));
+        System.out.println(color.contains("green"));
+        System.out.println();
 
         Collections.sort(color);
-        System.out.println();
-        for (String i : color) {
+        for(String i : color){
             System.out.println(i);
         }
         ArrayList<String> color2 = (ArrayList)color.clone();
         System.out.println();
-        for (String i : color2) {
+        for(String i : color2){
             System.out.println(i);
         }
+        System.out.println();
+        Collections.reverse(color);
+        for(String i : color){
+            System.out.println(i);
+        }
+        System.out.println();
+        System.out.println(color.equals(color2));
+        System.out.println();
+        color.clear();
+        System.out.println(color.isEmpty());
+        System.out.println();
+        color.ensureCapacity(100);
+        System.out.println(color.size());
+        color.add("red");
+        color.add("black");
+        color.add("blue");
+        color.trimToSize();
+        System.out.println(color.size());
+
     }
 }

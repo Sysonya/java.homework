@@ -1,0 +1,50 @@
+// Умовний оператор - 1
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int x = in.nextInt();
+        int y;
+        if (x < 5){
+            y = x*x-3*x+4;
+        }else {
+            y = x + 7;
+        }
+        System.out.println(y);
+    }
+}
+
+//Прямокутник
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        while( in.hasNextInt()){
+            int n = in.nextInt();
+            int m = in.nextInt();
+            int P = (n+m)*2;
+            int S = n*m;
+            System.out.println(P + " " + S);
+        }
+        in.close();
+    }
+}
+
+//Вивести масив 2
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        while( in.hasNextInt()){
+            int n = in.nextInt();
+            int m = in.nextInt();
+            int P = (n+m)*2;
+            int S = n*m;
+            System.out.println(P + " " + S);
+        }
+        in.close();
+    }
+}
